@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">ProductsMeli</string>
+    <string name="bienvenido_txt">Bienvenido!</string>
+    <string name="desea_buscar_txt">¿Que producto desea buscar?</string>
+    <string name="buscar_points_txt">Buscar...</string>
+    <string name="buscar_txt">Buscar</string>
+    <string name="tu_busqueda_txt">Tu busqueda arrojó:</string>
+    <string name="envio_gratis_text">Envío gratis</string>
+    <string name="vendidas_text">Vendidas:</string>
+    <string name="disponibles_text">Disponibles:</string>
+    <string name="mercado_pago_text">Acepta Mercado Pago</string>
+    <string name="ubicacion_text">Ubicación:</string>
+</resources>

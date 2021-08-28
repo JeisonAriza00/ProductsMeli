@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.ProductDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textNameProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray_web"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Sony PlayStation 5 825GB Digital Edition color blanco y negro"/>
+
+            <TextView
+                android:id="@+id/textPriceProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                tools:text="$ 3.299.000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textNameProduct"/>
+
+            <ImageView
+                android:id="@+id/imageProduct"
+                android:layout_width="280dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/textPriceProduct"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageProduct">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textFreeShipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/green_forest"
+                        android:text="@string/envio_gratis_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textMercadoPago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/blue_duke"
+                        android:text="@string/mercado_pago_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textFreeShipping"/>
+
+                    <TextView
+                        android:id="@+id/textVendidas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/vendidas_text"
+                        android:textAlignment="textStart"
+                        app:layout_constraintTop_toBottomOf="@id/textMercadoPago"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="Vendidas:"/>
+
+                    <TextView
+                        android:id="@+id/textVendidasValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="17dp"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintTop_toTopOf="@id/textVendidas"
+                        app:layout_constraintBottom_toBottomOf="@id/textVendidas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="3"/>
+
+                    <TextView
+                        android:id="@+id/textDisponibles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/disponibles_text"
+                        android:textAlignment="textStart"
+                        app:layout_constraintTop_toBottomOf="@id/textVendidas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="Disponibles:"/>
+
+                    <TextView
+                        android:id="@+id/textDisponiblesValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="17dp"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintTop_toTopOf="@id/textDisponibles"
+                        app:layout_constraintBottom_toBottomOf="@id/textDisponibles"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="40"/>
+
+                    <TextView
+                        android:id="@+id/textUbicacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/ubicacion_text"
+                        android:textAlignment="textStart"
+                        app:layout_constraintTop_toBottomOf="@id/textDisponibles"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:text="Ubicación:"/>
+
+                    <TextView
+                        android:id="@+id/textUbicacionValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="17dp"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintTop_toTopOf="@id/textUbicacion"
+                        app:layout_constraintBottom_toBottomOf="@id/textUbicacion"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="Bogotá D.C"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

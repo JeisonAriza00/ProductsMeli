@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#F7E51B</color>
+    <color name="primary_dark">#DCC423</color>
+    <color name="orange">#F18F01</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_web">#7C7C7C</color>
+    <color name="green_forest">#54BF36</color>
+    <color name="blue_duke">#090C9B</color>
+</resources>
