@@ -4,6 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.ProductDetailActivity">
 
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.jjariza.productsmeli.activities.ProductDetailActivityVM" />
+    </data>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,6 +30,7 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginEnd="17dp"
                 android:layout_marginTop="20dp"
+                android:text="@{viewModel.nameProduct}"
                 android:textAlignment="textStart"
                 android:textColor="@color/gray_web"
                 android:textSize="14sp"
@@ -35,6 +45,7 @@
                 android:layout_marginStart="17dp"
                 android:layout_marginEnd="17dp"
                 android:layout_marginTop="10dp"
+                android:text="@{viewModel.priceProduct}"
                 android:textAlignment="textStart"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -79,7 +90,8 @@
                         android:textColor="@color/green_forest"
                         android:text="@string/envio_gratis_text"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="@{viewModel.freeShipping ? View.VISIBLE : View.GONE}"/>
 
                     <TextView
                         android:id="@+id/textMercadoPago"
@@ -91,7 +103,8 @@
                         android:textColor="@color/blue_duke"
                         android:text="@string/mercado_pago_text"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/textFreeShipping"/>
+                        app:layout_constraintTop_toBottomOf="@id/textFreeShipping"
+                        android:visibility="@{viewModel.acceptMercadoPago ? View.VISIBLE : View.GONE}"/>
 
                     <TextView
                         android:id="@+id/textVendidas"
@@ -112,6 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="17dp"
+                        android:text="@{viewModel.soldQuantity}"
                         android:textAlignment="textEnd"
                         app:layout_constraintTop_toTopOf="@id/textVendidas"
                         app:layout_constraintBottom_toBottomOf="@id/textVendidas"
@@ -136,6 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="17dp"
+                        android:text="@{viewModel.availableQuantity}"
                         android:textAlignment="textEnd"
                         app:layout_constraintTop_toTopOf="@id/textDisponibles"
                         app:layout_constraintBottom_toBottomOf="@id/textDisponibles"
@@ -162,6 +177,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="17dp"
+                        android:text='@{viewModel.stateName + "," + viewModel.cityName}'
                         android:textAlignment="textEnd"
                         app:layout_constraintTop_toTopOf="@id/textUbicacion"
                         app:layout_constraintBottom_toBottomOf="@id/textUbicacion"

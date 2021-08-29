@@ -53,7 +53,7 @@ class ApiService(val context: Context) {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-    fun searchProducts(q: String, limit: String, offset: String ) = rxConfig(
-        apiInterface.searchProducts(q, limit, offset)
+    fun searchProducts(q: String, offset: String ) = rxConfig(
+        apiInterface.searchProducts(q, offset)
     )
 }

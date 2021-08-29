@@ -9,6 +9,5 @@ interface ApiInterface {
 
     @GET("search")
     fun searchProducts(@Query("q") q: String,
-                       @Query("limit") limit : String,
                        @Query("offset") offset : String): Observable<JsonObject>
 }
