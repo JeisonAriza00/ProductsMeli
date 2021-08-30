@@ -14,10 +14,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 
 private const val BASE_URL = "https://api.mercadolibre.com/sites/MCO/"
 
-class ApiService(val context: Context) {
+class ApiService() {
 
     private val okHttpClient = OkHttpClient.Builder()
-        .addInterceptor(ApiInterceptor(context))
         .connectTimeout(1, TimeUnit.MINUTES)
         .readTimeout(1, TimeUnit.MINUTES)
 
@@ -35,7 +34,7 @@ class ApiService(val context: Context) {
             .onErrorReturn(this::getError)
     }
 
-    internal fun getError(throwable: Throwable): JsonObject {
+    private fun getError(throwable: Throwable): JsonObject {
         val jsonObject = JsonObject()
         jsonObject.addProperty("error", 1)
         jsonObject.addProperty("response", throwable.toString())

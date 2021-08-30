@@ -57,14 +57,14 @@ class ProductDetailActivity : AppCompatActivity(), ProductDetailActivityVM.Liste
 
 class ProductDetailActivityVM: ViewModel(){
     var listener : Listener? = null
-    var nameProduct = ObservableField<String>("")
-    var priceProduct = ObservableField<String>("")
-    var freeShipping = ObservableField<Boolean>(false)
-    var acceptMercadoPago = ObservableField<Boolean>(false)
-    var soldQuantity = ObservableField<String>("")
-    var availableQuantity = ObservableField<String>("")
-    var stateName = ObservableField<String>("")
-    var cityName = ObservableField<String>("")
+    var nameProduct = ObservableField("")
+    var priceProduct = ObservableField("")
+    var freeShipping = ObservableField(false)
+    var acceptMercadoPago = ObservableField(false)
+    var soldQuantity = ObservableField("")
+    var availableQuantity = ObservableField("")
+    var stateName = ObservableField("")
+    var cityName = ObservableField("")
 
     interface Listener{
 
